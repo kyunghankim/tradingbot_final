@@ -43,7 +43,7 @@ class Stock:  # Stock 이라는 이름을 가진 클래스를 정의
 
 
 # item1, item2, item3은 객체 (=Stock이라는 클래스의 인스턴스)
-# 삼성전자'를 Stock 클래스의 __init__ 생성자의 두번째 매개변수인 stock_name 전달.
+# '삼성전자'를 Stock 클래스의 __init__ 생성자의 두번째 매개변수인 stock_name 전달.
 # 60900는 stock_price로 전달
 # 3.5는 stock_rate로 전달
 item1 = Stock('삼성전자', 60900, 3.5)
