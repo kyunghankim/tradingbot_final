@@ -225,4 +225,36 @@ t = Test2()
 t.print()
 print(f"t.item.x : {t.item.x}, t.item.y : {t.item.y}")
 
+class stock4:
+    def __init__(self, name, close, high, low):
+        self.name = name
+        self.close = close
+        self.high = high
+        self.low = low
+    def name(self):
+        return self.name
+    def close(self):
+        return self.close
+    def high(self):
+        return self.high
+    def low(self):
+        return self.low
 
+class calculator2:
+    def __init__(self,close,high,low):
+        # self.name = name
+        self.close = close
+        self.high = high
+        self.low = low
+    def average_price(self):
+        return (self.close+self.high+self.low)/3
+
+mission_item1 = stock4('삼전',67700,69500,67000)
+mission_item2 = stock4('skt',232000,235000,229000)
+cal2 = calculator2(mission_item1.close,mission_item1.high,mission_item1.low)
+typical_price1 = cal2.average_price()
+print(f"{item1.name}대푯값:{typical_price1}")
+
+cal3 = calculator2(mission_item1.close,mission_item1.high,mission_item1.low)
+typical_price2 = cal3.average_price()
+print(f"{item2.name}대푯값:{typical_price2}")
