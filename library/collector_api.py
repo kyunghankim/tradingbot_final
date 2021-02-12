@@ -22,6 +22,7 @@ MARKET_KOSDAQ = 10
 # 콜렉팅에 사용되는 메서드를 모아 놓은 클래스
 class collector_api():
     def __init__(self):
+        #키움과 연결하는 역할 open_api()
         self.open_api = open_api()
         self.engine_JB = self.open_api.engine_JB
         self.variable_setting()
@@ -44,6 +45,8 @@ class collector_api():
         # kospi(stock_kospi), kosdaq(stock_kosdaq), konex(stock_konex)
         # 관리종목(stock_managing), 불성실법인종목(stock_insincerity) 업데이트
         if rows[0][0] != self.open_api.today:
+            # 종목리스트 테이블 업데이트 코드
+            self.open_api.check_balance()
             self.get_code_list()  # 촬영 후 일부 업데이트 되었습니다.
 
         # 촬영 후 콜렉팅 순서가 일부 업데이트 되었습니다.
