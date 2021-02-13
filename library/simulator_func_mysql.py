@@ -106,7 +106,7 @@ class simulator_func_mysql:
 
         print("self.simul_num!!! ", self.simul_num)
 
-        ###!@####################################################################################################################
+        ###!@######이 표시가 된 부분에 simul 로직 구현하고 추가################################################################################################
         # 아래 부터는 알고리즘 별로 별도의 설정을 해주는 부분
 
         if self.simul_num == 1:
@@ -661,7 +661,7 @@ class simulator_func_mysql:
         # 매수할 종목이 없으면, df_realtime_daily_buy_list라는 데이터프레임의 길이를 저장하는
         # len_df_realtime_daily_buy_list에 다가 0을 넣는다.
         else:
-            self.len_df_realtime_daily_buy_list = 0
+            self.len_df_realtime_daily_buy_list == 0
             #강의 촬영 후 추가 코드 (매수 조건에 맞는 종목이 하나도 없을 경우 realtime_daily_buy_list 를 비워준다)
             if self.engine_simulator.dialect.has_table(self.engine_simulator, "realtime_daily_buy_list"):
                 self.engine_simulator.execute("""
@@ -732,7 +732,7 @@ class simulator_func_mysql:
                                         'today_buy_reinvest_count4_remain_count',
                                         'today_buy_reinvest_count5_remain_count'],
                                index=jango_temp['id'])
-
+        print("self.jango: !!", self.jango)
     # all_item_db 라는 테이블을 만들기 위한 self.df_all_item 데이터프레임
     def init_df_all_item(self):
         df_all_item_temp = {'id': []}
