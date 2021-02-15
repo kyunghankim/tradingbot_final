@@ -886,7 +886,7 @@ class simulator_func_mysql:
     def get_date_for_simul(self):
         sql = "select date from `gs글로벌` where date >= '%s' and date <= '%s' group by date"
         self.date_rows = self.engine_daily_craw.execute(sql % (self.simul_start_date, self.simul_end_date)).fetchall()
-
+        print("selfdaterows확인!:", self.date_rows)
     # daily_buy_list에 일자 테이블이 존재하는지 확인하는 함수
     def is_date_exist(self, date):
         print("is_date_exist 함수에 들어왔습니다!", date)
